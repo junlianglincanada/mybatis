@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title> Product</title>
+</head>
+
+<body>
+<div>
+    <table class="table table-bordered table-striped">
+        <form th:action="@{/product/save}" method="POST">
+            <input type="hidden" name="id" th:value="${product.getId()}"><br/>
+            <input type="text" id="name" name="name"  th:placeholder="Name"
+                   class="form-control" th:value="${product.getName()}" /> <br/>
+
+            <div align="center" th:if="${param.error}">
+                <p style="font-size: 20; color: #FF1C19;">Email or Password invalid, please verify</p>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" name="Submit" value="Save" type="Submit" th:text="Save"></button>
+        </form>
+    </table>
+</div>
+</body>
+</html>

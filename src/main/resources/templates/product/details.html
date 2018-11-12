@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title> Product</title>
+</head>
+
+<body>
+<div>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr>
+            <td th:text="${product.getId()}">1</td>
+            <td th:text="${product.getName()}">Text ...</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
